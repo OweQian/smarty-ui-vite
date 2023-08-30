@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+</head>
+<body>
+ <h1>Demo</h1>
+  <div id="app"></div>
+ <script type="module">
+   import { createApp } from "vue/dist/vue.esm-bundler";
+   import SmartyUI from '../../dist/smarty-ui.mjs';
+
+   createApp({
+     template: `
+      <SButton/>
+      <JSXButton/>
+      <SFCButton/>
+     `
+   }).use(SmartyUI).mount('#app');
+ </script>
+</body>
+</html>

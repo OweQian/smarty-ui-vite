@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+</head>
+<body>
+  <h1>Demo</h1>
+  <div id="app"></div>
+  <script type="module">
+    import { createApp } from "vue/dist/vue.esm-bundler";
+    import {SFCButton, JSXButton, MyButton} from '../../dist/smarty-ui.mjs';
+
+    createApp({
+      template: `
+      <SButton/>
+      <JSXButton/>
+      <SFCButton/>
+     `
+    })
+      .component(SFCButton.name, SFCButton)
+      .component(JSXButton.name, JSXButton)
+      .component(MyButton.name, MyButton)
+      .mount('#app');
+  </script>
+</body>
+</html>
